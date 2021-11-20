@@ -1,10 +1,12 @@
 const carregarPaginasNasDivs = (function () {
-  $("#v-pills-burca").load("./pages/burca.html");
-  $("#v-pills-trabalho").load("./pages/trabalho.html");
-  $("#v-pills-faculdade").load("./pages/faculdade.html");
-  $("#v-pills-hobby").load("./pages/hobby.html");
+  $("#v-pills-btech").load("./pages/btech.html");
+  $("#v-pills-trabalhos").load("./pages/trabalhos.html");
+  $("#v-pills-produtos").load("./pages/produtos.html");
+  $("#v-pills-time").load("./pages/time.html");
   $("#v-pills-contato").load("./pages/contato.html");
   $("#v-pills-donate").load("./pages/donate.html");
+  $("#v-pills-tecnologias").load("./pages/tecnologias.html");
+  $("#v-pills-projeto").load("./pages/projeto.html");
 })();
 
 function mudarConteudoDoTrabalho(index) {
@@ -24,34 +26,17 @@ function mudarConteudoDoTrabalho(index) {
   document.getElementById("site-trabalho").innerHTML = website;
 }
 
-function mudarConteudoDaFaculdade(index) {
-  //0 - Trailerflix
-  //1 - The Cleaners
+function mudarConteudoDeProdutos(index) {
+  //0 - Consultoria
+  //1 - Encomendas
 
-  let imagem = faculdade.imagem[index];
+  let titulo = produtos.titulo[index];
+  let descricao = produtos.descricao[index];
+  let preco = produtos.preco[index];
 
-  let descricao = faculdade.descricao[index];
-  let funcao = faculdade.funcao[index];
-
-  document.getElementById("imagem-faculdade").src = imagem;
-
-  document.getElementById("texto-descricao-faculdade").innerHTML = descricao;
-  document.getElementById("texto-funcao-faculdade").innerHTML = funcao;
-}
-
-function mudarConteudoDeHobby(index) {
-  //0 - Block Pew Pew
-  //1 - Arrow Challenge
-
-  let imagem = hobby.imagem[index];
-
-  let descricao = hobby.descricao[index];
-  let funcao = hobby.funcao[index];
-
-  document.getElementById("imagem-hobby").src = imagem;
-
-  document.getElementById("texto-descricao-hobby").innerHTML = descricao;
-  document.getElementById("texto-funcao-hobby").innerHTML = funcao;
+  document.getElementById("texto-titulo-produto").innerHTML = `<b>${titulo}</b>`;
+  document.getElementById("texto-descricao-produto").innerHTML = descricao;
+  document.getElementById("texto-preco-produto").innerHTML = preco;
 }
 
 const trabalhos = {
@@ -71,15 +56,18 @@ const trabalhos = {
   ],
 };
 
-const faculdade = {
-  imagem: ["assets/banner-trailerflix.png", "assets/banner-thecleaners.png"],
-  descricao: [
-    "É um app para ver trailers de filmes",
-    "É um jogo de puzzle desenvolvido no UTFGames",
+const produtos = {
+  titulo:[
+    "Consultoria",
+    "Software Sob Encomenda"
   ],
-  funcao: [
-    "Desenvolvedor Android nativo (utilizando Kotlin)",
-    "Game Designer, Desenvolvedor Unity (utilizando C#)",
+  descricao: [
+    "Trocamos uma ideia e eu resolvo, ou no mínimo, ajudo a resolver uma dúvida sua em relação ao seu app Android, Desktop ou qualquer outra dúvida sobre T.I",
+    "Você pode encomendar um aplicativo Android, com as suas especificações e nós fazemos pra você !",
+  ],
+  preco: [
+    "A bagatela de R$100/h",
+    "É necessária uma conversa prévia",
   ],
 };
 

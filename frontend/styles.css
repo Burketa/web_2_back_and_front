@@ -155,6 +155,26 @@ a {
     var(--primaryDark) 0px 18px 36px -18px inset !important;
 }
 
+#v-pills-tecnologias-tab {
+  position: absolute !important;
+  top: 0 !important;
+  right: 200px !important;
+  width: 150px !important;
+  height: calc(64px + 2vh) !important;
+  box-shadow: var(--primaryDark) 0px 30px 80px -12px inset,
+    var(--primaryDark) 0px 18px 36px -18px inset !important;
+}
+
+#v-pills-projeto-tab {
+  position: absolute !important;
+  top: 0 !important;
+  right: 350px !important;
+  width: 100px !important;
+  height: calc(64px + 2vh) !important;
+  box-shadow: var(--primaryDark) 0px 30px 80px -12px inset,
+    var(--primaryDark) 0px 18px 36px -18px inset !important;
+}
+
 .nav-pills .nav-link {
   border-radius: 0 !important;
 }
@@ -223,20 +243,36 @@ a {
   background-color: red;
 }
 
-.height100 {
-  height: 100%;
+.height10 {
+  height: 10%;
 }
 
 .height15 {
   height: 15%;
 }
 
+.height50 {
+  height: 50%;
+}
+
+.height60 {
+  height: 60%;
+}
+
 .height70 {
   height: 70%;
 }
 
-.height10 {
-  height: 10%;
+.height100 {
+  height: 100%;
+}
+
+.width50{
+  width: 50%;
+}
+
+.marginStart25{
+  margin-left: 25%;
 }
 
 .height90padding {
@@ -269,30 +305,28 @@ a {
   margin-left: 20px;
 }
 
-#descricao-faculdade {
+#descricao-produto {
   text-align: center;
 }
 
-#bolhas-faculdade {
+#bolhas-produto {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#bolhas-faculdade img + img {
+#bolhas-produto img + img {
   margin-left: 20px;
 }
 
-#descricao-hobby {
+#descricao-time {
   text-align: center;
 }
 
-#bolhas-hobby {
+.nome-titulo-meio {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#bolhas-hobby img + img {
-  margin-left: 20px;
+  font-size: xx-large;
+  margin-bottom: 5%;
 }
